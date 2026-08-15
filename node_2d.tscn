@@ -34,7 +34,7 @@ one_shot = true
 zoom = Vector2(0.49, 0.49)
 
 [node name="Enemy" type="CharacterBody2D" parent="." unique_id=197839000]
-position = Vector2(0, 348)
+position = Vector2(0, 376)
 script = ExtResource("3_0hol4")
 metadata/_edit_group_ = true
 
