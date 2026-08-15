@@ -15,3 +15,9 @@ func _physics_process(delta: float) -> void:
 		velocity = velocity.move_toward(MAX_SPEED * direction, ACCELERATION * delta)
 
 	move_and_slide()
+
+
+
+
+
+	

@@ -1,0 +1,32 @@
+[gd_scene format=3 uid="uid://ldamyt6un60n"]
+
+[ext_resource type="Script" uid="uid://b41wbrnfscung" path="res://Script/enemy_vertical.gd" id="1_gcqn1"]
+[ext_resource type="Texture2D" uid="uid://unt5ri0srbgp" path="res://Asset/enemy.jpg" id="2_jjypc"]
+[ext_resource type="Script" uid="uid://cocee4aeyg6k1" path="res://Script/hit_box.gd" id="3_jjypc"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_apsbx"]
+size = Vector2(206, 258)
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_b54ie"]
+size = Vector2(216, 264)
+
+[node name="Enemy" type="CharacterBody2D" unique_id=2043037417]
+collision_layer = 4
+script = ExtResource("1_gcqn1")
+metadata/_edit_group_ = true
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="." unique_id=1692590820]
+shape = SubResource("RectangleShape2D_apsbx")
+
+[node name="Sprite2D" type="Sprite2D" parent="." unique_id=998851155]
+scale = Vector2(0.43699497, 0.42487884)
+texture = ExtResource("2_jjypc")
+
+[node name="HitBox" type="Area2D" parent="." unique_id=1481143964]
+script = ExtResource("3_jjypc")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="HitBox" unique_id=1453638149]
+position = Vector2(0, -1)
+shape = SubResource("RectangleShape2D_b54ie")
+
+[connection signal="body_entered" from="HitBox" to="HitBox" method="_on_body_entered"]

@@ -15,9 +15,9 @@ compatibility/default_parent_skeleton_in_mesh_instance_3d=true
 [application]
 
 config/name="LineBreaker"
-run/main_scene="res://node_2d.tscn"
+run/main_scene="res://Scene/arena.tscn"
 config/features=PackedStringArray("4.7", "Forward Plus")
-config/icon="res://icon.svg"
+config/icon="res://Asset/icon.svg"
 
 [input]
 
